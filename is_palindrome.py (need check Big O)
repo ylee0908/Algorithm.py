@@ -1,0 +1,27 @@
+import string
+
+def is_palindrome_one(s):
+	s = ''.join(i for i in s if i.isalpha()).lower()
+	s = s.translate(string.punctuation)
+
+	return s == s[::-1]
+
+
+def is_palindrom_two(s):
+	s = ''.join(i for i in s if i.isalpha()).lower()
+	s = s.translate(string.punctuation)
+
+	i = 0
+	j = len(s) - 1
+	while s[i] and s[2] and i < j:
+		if s[i] != s[j]:
+			return False
+		i += 1
+		j -= 1
+	return True
+
+
+s = "Was it a cat I saw?"
+
+print(is_palindrome_one(s))
+print(is_palindrom_two(s))
