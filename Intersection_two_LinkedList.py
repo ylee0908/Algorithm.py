@@ -1,13 +1,5 @@
 160. Intersection of Two Linked Lists
-Easy
 
-3052
-
-338
-
-Add to List
-
-Share
 Write a program to find the node at which the intersection of two singly linked lists begins.
 
 # Definition for singly-linked list.
@@ -29,6 +21,15 @@ class Solution(object):
         B_pointer = headB
         
         while A_pointer != B_pointer:
-            A_pointer = headB if A_pointer == None else A_pointer.next
-            B_pointer = headA if B_pointer == None else B_pointer.next
+            #A_pointer = headB if A_pointer == None else A_pointer.next
+            #B_pointer = headA if B_pointer == None else B_pointer.next
+            if A_pointer == None:
+                A_pointer = headB
+            else:
+                A_pointer = A_pointer.next
+             
+            if B_pointer == None:
+                B_pointer = headA
+            else:
+                B_pointer = B_pointer.next
         return A_pointer
