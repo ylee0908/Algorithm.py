@@ -21,7 +21,10 @@ class Solution(object):
         """
         ht = dict()
         for i in nums:
-            ht[i] += 1
+            if i in ht:
+                ht[i] = 1
+            else:
+                ht[i] += 1
         for i in ht:
             if ht[i] == 1
             return i
