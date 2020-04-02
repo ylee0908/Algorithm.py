@@ -13,7 +13,7 @@ def is_palindrom_two(s):
 
 	i = 0
 	j = len(s) - 1
-	while s[i] and s[2] and i < j:
+	while s[i] and s[j] and i < j:
 		if s[i] != s[j]:
 			return False
 		i += 1
