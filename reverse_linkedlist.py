@@ -25,3 +25,17 @@ class Solution(object):
         head.next.next = head
         head.next = None
         return p
+    
+#iterative
+
+def reverseList(head):
+    prev = None
+    curr = head
+    
+    while curr:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+     return prev
+
